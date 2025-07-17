@@ -1,0 +1,41 @@
+@startuml
+entity Productos {
+  Id INT <<PK>>
+  Nombre VARCHAR 
+  Descripción VARCHAR
+  Precio FLOAT 
+  Stock INT 
+  Categoria_id INT
+  
+  <<FK>> Categoria VARCHAR()
+}
+
+entity Clientes {
+  Id INT <<PK>>
+  Nombre VARCHAR
+  Correo Electronico VARCHAR
+  Dirección VARCHAR
+  Telefono VARCHAR 
+}
+
+
+entity Pedidos{
+  Id INT <<PK>>
+  Fecha DATE
+  Estado VARCHAR
+  Productos_Id INT
+  <<FK>> Productos_ID()
+
+}
+
+entity Resenas{
+  id INT <<PK>>
+  Calificación_Producto INT
+  Comentario VARCHAR
+}
+
+entity Categorias {
+  Id INT <<PK>>
+  Nombre VARCHAR
+  Descripcion VARCHAR
+}
