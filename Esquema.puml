@@ -5,8 +5,6 @@ entity Productos {
   Descripción VARCHAR
   Precio FLOAT 
   Stock INT 
-  Categoria_id INT
-  
   <<FK>> Categoria VARCHAR()
 }
 
@@ -21,17 +19,22 @@ entity Clientes {
 
 entity Pedidos{
   Id INT <<PK>>
-  Fecha DATE
+  Fecha_pedido DATE
   Estado VARCHAR
   Productos_Id INT
-  <<FK>> Productos_ID()
+  <<FK>> id_cliente INT
 
 }
+
 
 entity Resenas{
   id INT <<PK>>
   Calificación_Producto INT
   Comentario VARCHAR
+  fecha date 
+
+<<FK>> id_producto INT
+<FK>> id_cliente INT
 }
 
 entity Categorias {
@@ -39,3 +42,15 @@ entity Categorias {
   Nombre VARCHAR
   Descripcion VARCHAR
 }
+
+entity Detalles_pedido {
+   Id INT <<PK>>
+   Cantidad INT
+   Precio_unitario FLOAT 
+<<FK> Id_pedido INT
+<<FK>> Id_cliente INT
+
+}
+
+
+pedidos - productos

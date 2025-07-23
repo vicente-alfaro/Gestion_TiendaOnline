@@ -60,3 +60,8 @@ Sin  fk candidata.
 categorias: nombre, y descripcion de cada categoria. 
 sin fk candidata. 
  
+
+
+
+
+Utlizamos UNIQUE Y CHECK, para realizar la unicidad de los correos electronico, y para no haceptar valores negativos en el stock. 
