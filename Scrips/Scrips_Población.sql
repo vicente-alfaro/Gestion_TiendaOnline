@@ -1,4 +1,4 @@
-USE TiendaOnline;
+
 
 
 INSERT INTO Categorias (Nombre, Descripcion) VALUES
@@ -10,8 +10,6 @@ INSERT INTO Categorias (Nombre, Descripcion) VALUES
 
 
 
-
--- Productos
 INSERT INTO Productos (Nombre, Descripcion, Precio, Stock, Categoria_Id) VALUES
 ('Laptop Dell', 'Laptop Dell de excelente calidad', 5477.34, 76, 1),
 ('Smartphone Samsung', 'Smartphone Samsung de excelente calidad', 5821.67, 20, 1),
@@ -67,6 +65,7 @@ INSERT INTO Productos (Nombre, Descripcion, Precio, Stock, Categoria_Id) VALUES
 
 
 
+
 INSERT INTO Clientes (Nombre, Correo_Electronico, Direccion, Telefono) VALUES
 ('Ana García', 'ana.garcia@correo.com', 'Calle 1 #101, Ciudad', '555100001'),
 ('Luis Torres', 'luis.torres@correo.com', 'Calle 2 #102, Ciudad', '555100002'),
@@ -93,6 +92,14 @@ INSERT INTO Clientes (Nombre, Correo_Electronico, Direccion, Telefono) VALUES
 ('Renata Paredes', 'renata.paredes@correo.com', 'Calle 23 #123, Ciudad', '555100023'),
 ('Marco Ibarra', 'marco.ibarra@correo.com', 'Calle 24 #124, Ciudad', '555100024'),
 ('Andrea Campos', 'andrea.campos@correo.com', 'Calle 25 #125, Ciudad', '555100025');
+
+
+
+
+
+
+
+
 
 
 
@@ -149,6 +156,12 @@ INSERT INTO Pedidos (Fecha_pedido, Estado, Id_Cliente) VALUES
 ('2025-07-21', 'Pendiente', 1);
 
 
+
+
+
+
+
+
 INSERT INTO Detalles_Pedido (Id_Pedido, Id_Producto, Cantidad, Precio_Unitario) VALUES
 (2, 1, 1, 5632.66),
 (4, 2, 1, 3094.99),
@@ -177,6 +190,10 @@ INSERT INTO Detalles_Pedido (Id_Pedido, Id_Producto, Cantidad, Precio_Unitario) 
 (50, 25, 2, 474.91);
 
 
+
+
+
+
 INSERT INTO Resenas (Calificacion_Producto, Comentario, Fecha, Id_Producto, Id_Cliente) VALUES
 (4, 'Reseña positiva del producto 1', '2025-07-06', 1, 1),
 (4, 'Reseña positiva del producto 2', '2025-07-07', 2, 2),
@@ -188,3 +205,6 @@ INSERT INTO Resenas (Calificacion_Producto, Comentario, Fecha, Id_Producto, Id_C
 (3, 'Reseña positiva del producto 8', '2025-07-13', 8, 8),
 (5, 'Reseña positiva del producto 9', '2025-07-14', 9, 9),
 (3, 'Reseña positiva del producto 10', '2025-07-15', 10, 10);
+
+
+

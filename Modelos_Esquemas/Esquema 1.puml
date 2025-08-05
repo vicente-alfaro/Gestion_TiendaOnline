@@ -1,0 +1,49 @@
+@startuml
+
+entity Categorias {
+  Id INT <<PK>>
+  Nombre VARCHAR
+  Descripcion VARCHAR
+}
+
+entity Productos {
+  Id INT <<PK>>
+  Nombre VARCHAR
+  Descripcion VARCHAR
+  Precio FLOAT
+  Stock INT
+  Categoria_Id INT <<FK>>
+}
+
+entity Clientes {
+  Id INT <<PK>>
+  Nombre VARCHAR
+  Correo_Electronico VARCHAR
+  Direccion VARCHAR
+  Telefono VARCHAR
+}
+
+entity Pedidos {
+  Id INT <<PK>>
+  Fecha_pedido DATE
+  Estado VARCHAR
+  Id_Cliente INT <<FK>>
+  Id_Producto INT <<FK>>  ' Relación directa, simplificada
+}
+
+entity Resenas {
+  Id INT <<PK>>
+  Calificacion_Producto INT
+  Comentario VARCHAR
+  Id_Producto INT <<FK>>
+  Id_Cliente INT <<FK>>
+}
+
+' Relaciones
+Productos }o--|| Categorias : tienen
+Pedidos }o--|| Clientes : hace
+Pedidos }o--|| Productos : incluye
+Resenas }o--|| Clientes : realiza
+Resenas }o--|| Productos : sobre
+
+@enduml

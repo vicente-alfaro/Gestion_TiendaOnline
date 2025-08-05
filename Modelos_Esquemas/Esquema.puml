@@ -32,7 +32,6 @@ entity Resenas{
   Calificación_Producto INT
   Comentario VARCHAR
   fecha date 
-
 <<FK>> id_producto INT
 <FK>> id_cliente INT
 }
@@ -53,4 +52,11 @@ entity Detalles_pedido {
 }
 
 
-pedidos - productos
+Productos }o--|| Categorias : pertenece a
+Pedidos }o--|| Clientes : realizado por
+Resenas }o--|| Productos : reseña de
+Resenas }o--|| Clientes : escrita por
+Detalles_Pedido }o--|| Pedidos : pertenece a
+Detalles_Pedido }o--|| Productos : contiene
+
+@enduml

@@ -1,0 +1,77 @@
+@startchen
+
+entity Categorias {
+  Id
+  Nombre
+  Descripcion
+}
+
+entity Productos {
+  Id
+  Nombre
+  Descripcion
+  Precio
+  Stock
+}
+
+entity Clientes {
+  Id
+  Nombre
+  Correo_Electronico
+  Direccion
+  Telefono
+}
+
+entity Pedidos {
+  Id
+  Fecha_pedido
+  Estado
+}
+
+entity Detalles_Pedido {
+  Id
+  Cantidad
+  Precio_Unitario
+}
+
+entity Resenas {
+  Id
+  Calificacion_Producto
+  Comentario
+  Fecha
+}
+
+
+relationship pertenece {
+}
+relationship realiza {
+}
+relationship contiene_pedido {
+}
+relationship contiene_producto {
+}
+relationship hace {
+}
+relationship tiene {
+}
+
+
+Productos =N= pertenece
+pertenece =1= Categorias
+
+Clientes =1= realiza
+realiza =N= Pedidos
+
+Pedidos =1= contiene_pedido
+contiene_pedido =N= Detalles_Pedido
+
+Productos =1= contiene_producto
+contiene_producto =N= Detalles_Pedido
+
+Clientes =1= hace
+hace =N= Resenas
+
+Productos =1= tiene
+tiene =N= Resenas
+
+@endchen
