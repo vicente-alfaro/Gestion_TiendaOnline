@@ -194,11 +194,11 @@ Una vez completada la parte de las restricciones de la base de datos, procederem
 
 **Scrips de creación:**
 
-[Enlace 5](/Scrips/Scrips_Población.sql)
+[Enlace 5](/Scrips/Scrips_Creación.sql)
 
 
 
-**Poblar base de datos:**
+**Poblar base de datos**
 
 Para poblar la base de datos use la herramienta en linea: https://www.mockaroo.com/, que me permite seleccionar el tipo de dato,la cantidad de filas, y me devuelve un scrip de creación para usar en terminal e insertar. En esta parte tuve un problema al relacionar los valores por sus claves foraneas, por eso en los scrips tengo duplicada la población. 
 
@@ -206,7 +206,7 @@ Scrips de poblacion generado:
 [Enlace 6](/Scrips/Scrips_Población.sql)
 
 Scrips usado con datos de Mockaroo:
-[Enlace 7](/Scrips/Scrip_PoblacionMockaroo.sqll)
+[Enlace 7](/Scrips/Scrip_PoblacionMockaroo.sql)
 
 
 
